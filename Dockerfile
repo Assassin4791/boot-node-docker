@@ -15,7 +15,12 @@ RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true
 RUN apt-get install -y oracle-java8-installer
 
 RUN java -version
-RUN java -version
 
+#ставим ноду
 
-CMD ["/bin/bash"]
+RUN apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install -g gulp
+
+CMD ["sh", "-c", "${RUN_SCRIPT}"]
