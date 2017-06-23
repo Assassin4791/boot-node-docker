@@ -15,8 +15,7 @@ RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true
 RUN apt-get install -y oracle-java8-installer
 
 RUN java -version
-
-
+RUN java -version
 
 
 CMD ["/bin/bash"]
