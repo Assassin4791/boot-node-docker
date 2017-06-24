@@ -7,6 +7,9 @@ RUN apt-get update
 RUN apt-get install -y python-software-properties
 RUN apt-get install -y debconf-utils
 RUN apt-get install -y software-properties-common
+RUN locale-gen ru_RU
+RUN locale-gen ru_RU.UTF-8
+RUN update-locale
 
 #ставим джаву
 RUN add-apt-repository -y ppa:webupd8team/java
