@@ -11,6 +11,7 @@ RUN apt-get install locales
 RUN locale-gen ru_RU
 RUN locale-gen ru_RU.UTF-8
 RUN update-locale
+RUN dpkg-reconfigure locales
 
 #ставим джаву
 RUN add-apt-repository -y ppa:webupd8team/java
